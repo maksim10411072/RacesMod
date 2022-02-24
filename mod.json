@@ -1,0 +1,19 @@
+{
+  "Name": "Races Mod",
+  "Author": "Maksimkaas",
+  "Description": "New Races!",
+  "ModVersion": "4.0",
+  "GameVersion": "1.22+",
+  "ThumbnailPath": "thumb.png",
+  "EntryPoint": "Mod.Mod",
+  "Tags": [
+    "Fun"
+  ],
+  "Scripts": [
+    "races.cs",
+    "blood.cs"
+  ],
+  "Active": true,
+  "UGCIdentity": null,
+  "CreatorUGCIdentity": null
+}
