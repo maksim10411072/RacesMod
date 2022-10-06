@@ -2,7 +2,7 @@
   "Name": "Races Mod",
   "Author": "Maksimkaas",
   "Description": "New Races!",
-  "ModVersion": "4.0",
+  "ModVersion": "4.3",
   "GameVersion": "1.22+",
   "ThumbnailPath": "thumb.png",
   "EntryPoint": "Mod.Mod",
