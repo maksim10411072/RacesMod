@@ -70,7 +70,6 @@ namespace Mod
                         body.CirculationBehaviour.ClearLiquid();
                         body.CirculationBehaviour.AddLiquid(Liquid.GetLiquid("ASTRO SERUM"), 4f);
                     };
-                    var head = Instance.transform.Find("Head");
                 }
             });
             ModAPI.RegisterLiquid(aChocolate.Chocolate.ID, new aChocolate.Chocolate());
