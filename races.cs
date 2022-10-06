@@ -138,37 +138,6 @@ namespace Mod
                 }
             });
             ModAPI.RegisterLiquid(aAppleJuice.AppleJuice.ID, new aAppleJuice.AppleJuice());
-            ModAPI.Register(
-            new Modification()
-            {
-                OriginalItem = ModAPI.FindSpawnable("Human"),
-                NameOverride = "Apple -Races",
-                DescriptionOverride = "Apple!",
-                CategoryOverride = ModAPI.FindCategory("Entities"),
-                ThumbnailOverride = ModAPI.LoadSprite("AppleThumb.png"),
-                AfterSpawn = (Instance) =>
-                {
-                    var skin = ModAPI.LoadTexture("Apple.png");
-                    var flesh = ModAPI.LoadTexture("AppleFlesh.png");
-                    var bone = ModAPI.LoadTexture("AppleSkeleton.png");
-                    var person = Instance.GetComponent<PersonBehaviour>();
-                    person.SetBodyTextures(skin, flesh, bone, 1);
-                    person.SetBruiseColor(84, 36, 20); //main bruise colour. purple-ish by default
-                    person.SetSecondBruiseColor(84, 36, 20); //second bruise colour. red by default
-                    person.SetThirdBruiseColor(84, 36, 20);
-                    foreach (var body in person.Limbs)
-                    {
-                        body.RegenerationSpeed = 10f;
-                        body.DiscomfortingHeatTemperature = 40f;
-                        body.FreezingTemperature = -50f;
-                        body.BodyTemperature = 0f;
-                        body.Vitality *= 1.5f;
-                        body.BloodLiquidType = "APPLEJUICE";
-                        body.CirculationBehaviour.ClearLiquid();
-                        body.CirculationBehaviour.AddLiquid(Liquid.GetLiquid("APPLEJUICE"), 1f);
-                    };
-                }
-            });
             ModAPI.RegisterLiquid(aCucumberJuice.CucumberJuice.ID, new aCucumberJuice.CucumberJuice());
             ModAPI.Register(
             new Modification()
